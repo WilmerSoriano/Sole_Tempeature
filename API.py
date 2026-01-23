@@ -22,8 +22,8 @@ def fetch_data():
         data = response.json()
 
         temp = float(data["main"]["temp"])
-        h_temp = float(data["main"]["temp_max"]) 
-        l_temp =  float(data["main"]["temp_min"])
+        h_temp = int(data["main"]["temp_max"]) 
+        l_temp =  int(data["main"]["temp_min"])
         
         return temp, h_temp, l_temp
     else:
