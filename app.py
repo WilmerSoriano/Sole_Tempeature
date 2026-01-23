@@ -110,7 +110,7 @@ if __name__ == "__main__":
         raise ValueError("High tempeature must be a valid tempeature value")
     
     if type(l_temp) != int:
-        raise ValueError("Main Tempeature must be a valid tempeature value")
+        raise ValueError("Low Tempeature must be a valid tempeature value")
     
     ui = Ui_MainWindow(temp, h_temp, l_temp)
     ui.setupUi(MainWindow)
