@@ -11,7 +11,7 @@ A simple **desktop weather application** built using **PyQt** for the GUI and th
 ## 📸 Screenshot
 
 ![Weather App Screenshot](screenshot.png)  
-*Replace `screenshot.png` with your actual screenshot.*
+*Replace `screenshot.png` with your actual screenshoot*
 
 ---
 
