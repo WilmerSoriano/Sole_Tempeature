@@ -1,8 +1,13 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from API import fetch_data
 
 class Ui_MainWindow(object):
+    def __init__(self, temp, h_temp, l_temp):
+        self._temp = value
+        self._h_temp = h_temp
+        self._l_temp = l_temp
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(531, 630)
@@ -85,8 +90,8 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
 
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.cityName.setText(_translate("MainWindow", "NameHere!"))
-        self.temp.setText(_translate("MainWindow", "tempHere!"))
+        self.cityName.setText(_translate("MainWindow", "Dallas")) # ============ For now Hardcoded city here  TO BE UPDATED!!!
+        self.temp.setText(_translate("MainWindow", f""))
         self.high_temp.setText(_translate("MainWindow", "H Here!"))
         self.low_temp.setText(_translate("MainWindow", "L Here!"))
 
@@ -95,7 +100,19 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
 
-    ui = Ui_MainWindow()
+    temp, h_temp, l_temp = fetch_data()
+    
+    # Added error handling before app is executed
+    if type(temp) != float:
+        raise ValueError("Main tempeature must be a valid tempeature value")
+    
+    if type(h_temp) != float:
+        raise ValueError("High tempeature must be a valid tempeature value")
+    
+    if type(l_temp) != float:
+        raise ValueError("Main Tempeature must be a valid tempeature value")
+    
+    ui = Ui_MainWindow(temp, h_temp, l_temp)
     ui.setupUi(MainWindow)
 
     MainWindow.show()
