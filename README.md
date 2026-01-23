@@ -4,14 +4,9 @@
 ![PyQt5](https://img.shields.io/badge/PyQt5-5.15-brightgreen)
 ![API](https://img.shields.io/badge/OpenWeatherMap-API-orange)
 
-A simple **desktop weather application** built using **PyQt** for the GUI and the **OpenWeatherMap API** to fetch live weather data.  
-
----
-
-## 📸 Screenshot
+A simple **desktop weather application** built using **PyQt** for the GUI and the **OpenWeatherMap API** to fetch live weather data.
 
 ![Weather App Screenshot](screenshot.png)  
-*Replace `screenshot.png` with your actual screenshoot*
 
 ---
 
