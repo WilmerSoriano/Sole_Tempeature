@@ -4,7 +4,7 @@ from API import fetch_data
 
 class Ui_MainWindow(object):
     def __init__(self, temp, h_temp, l_temp):
-        self._temp = value
+        self._temp = temp
         self._h_temp = h_temp
         self._l_temp = l_temp
 
@@ -90,10 +90,10 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
 
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.cityName.setText(_translate("MainWindow", "Dallas")) # ============ For now Hardcoded city here  TO BE UPDATED!!!
-        self.temp.setText(_translate("MainWindow", f""))
-        self.high_temp.setText(_translate("MainWindow", "H Here!"))
-        self.low_temp.setText(_translate("MainWindow", "L Here!"))
+        self.cityName.setText(_translate("MainWindow", "Dallas")) # ============ For now Hardcoded city name  TO BE UPDATED!!!
+        self.temp.setText(_translate("MainWindow", f"{self._temp}°"))
+        self.high_temp.setText(_translate("MainWindow", f"H: {self._h_temp}° "))
+        self.low_temp.setText(_translate("MainWindow", f"L: {self._l_temp}° "))
 
 
 if __name__ == "__main__":
@@ -106,10 +106,10 @@ if __name__ == "__main__":
     if type(temp) != float:
         raise ValueError("Main tempeature must be a valid tempeature value")
     
-    if type(h_temp) != float:
+    if type(h_temp) != int:
         raise ValueError("High tempeature must be a valid tempeature value")
     
-    if type(l_temp) != float:
+    if type(l_temp) != int:
         raise ValueError("Main Tempeature must be a valid tempeature value")
     
     ui = Ui_MainWindow(temp, h_temp, l_temp)
