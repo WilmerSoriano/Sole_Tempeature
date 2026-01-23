@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 # Load variables from .env into environment
 load_dotenv()
 
+# Location: Dallas, Texas, US
 CityName = "Dallas"
 
 # Keeping API Key a Secret
