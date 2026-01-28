@@ -36,7 +36,7 @@ OPEN_API_KEY=your_open_weather_map_api_key_here
 ```
 ---
 
-### 🏗 2nd. Build the image
+### 2nd. Build the image
 ```text
 docker build -t sole_temperature .
 ```
@@ -60,9 +60,3 @@ docker-compose up
 - OpenWeatherMap API: [https://openweathermap.org/api](https://openweathermap.org/api)
 - PyQt5 Documentation: [https://www.riverbankcomputing.com/static/Docs/PyQt5/](https://www.riverbankcomputing.com/static/Docs/PyQt5/)
 
----
-
-## Instructions for use
-1. Replace `your_openweathermap_api_key` with your actual API key inside .env file.
-2. No other dependencies are required outside of those specified in the Dockerfile.
-3. Enjoy checking the weather with Sole_Temperature! 🌤️
