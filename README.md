@@ -1,4 +1,4 @@
-# Sole_Tempeature 🌤️
+# Sole_Temperature 🌤️
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![PyQt5](https://img.shields.io/badge/PyQt5-5.15-brightgreen)
