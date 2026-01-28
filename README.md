@@ -29,35 +29,35 @@ A simple **desktop weather application** built using **PyQt** for the GUI and th
 
 ## ⚡ Setup Instructions
 
-### Create & activate virtual environment
-```bash
-python -m venv .venv
-source .venv/bin/activate   # Linux/macOS
-.venv\Scripts\activate      # Windows
-```
-
-### Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
 ### Set up API key
 Create a `.env` file:
 ```text
-OPEN_API_KEY=your_openweathermap_api_key
+OPEN_API_KEY=your_openweathermap_api_key_here
 ```
 
-### Run the app
-```bash
-python main.py
-```
+### 🏗 Build the image
+
+docker build -t sole_temperature .
+
+---
+
+### ▶ Run the app
+
+docker-compose up
+
+Run in background:
+
+docker-compose up -d
+
+Stop:
+
+docker-compose down
 
 ---
 
 ## 📌 Notes
 
 - Designed the GUI in **Qt Designer** and loaded `.ui` file with PyQt5.
-- Background image (`bg.jpg`) and fonts/colors can be customized.
 - API key is hidden using `.env` for security.
 
 ---
@@ -70,9 +70,6 @@ python main.py
 ---
 
 ## Instructions for use
-1. Replace `<your-repo-url>` with your actual repository URL
-2. Replace `<your-repo-folder>` with your actual repository folder name
-3. Replace `your_openweathermap_api_key` with your actual API key
-4. Add your actual screenshot as `screenshot.png` in the root directory
-5. Update the Python version in badges if needed (currently shows 3.11)
-6. Save this content as `README.md` in your project root
+1. Replace `your_openweathermap_api_key` with your actual API key
+2. No other dependencies are required outside of those specified in the Dockerfile.
+3. Enjoy checking the weather with Sole_Temperature! 🌤️
