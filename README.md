@@ -29,29 +29,22 @@ A simple **desktop weather application** built using **PyQt** for the GUI and th
 
 ## ⚡ Setup Instructions
 
-### Set up API key
+### 1st. Set up API key
 Create a `.env` file:
 ```text
-OPEN_API_KEY=your_openweathermap_api_key_here
+OPEN_API_KEY=your_open_weather_map_api_key_here
 ```
-
-### 🏗 Build the image
-
-docker build -t sole_temperature .
-
 ---
 
-### ▶ Run the app
+### 🏗 2nd. Build the image
+```text
+docker build -t sole_temperature .
+```
 
+### ▶ 3rd.Run the app
+```
 docker-compose up
-
-Run in background:
-
-docker-compose up -d
-
-Stop:
-
-docker-compose down
+```
 
 ---
 
@@ -70,6 +63,6 @@ docker-compose down
 ---
 
 ## Instructions for use
-1. Replace `your_openweathermap_api_key` with your actual API key
+1. Replace `your_openweathermap_api_key` with your actual API key inside .env file.
 2. No other dependencies are required outside of those specified in the Dockerfile.
 3. Enjoy checking the weather with Sole_Temperature! 🌤️
