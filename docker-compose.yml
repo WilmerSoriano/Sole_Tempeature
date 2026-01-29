@@ -1,11 +1,14 @@
 services:
   weather-app:
+    build: .
     image: sole_temperature
     env_file:
       - .env
     environment:
       - DISPLAY=${DISPLAY}
+      - QT+X11_NO_MITSHM=1
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
     stdin_open: true
     tty: true
