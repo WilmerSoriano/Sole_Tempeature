@@ -2,13 +2,12 @@
 FROM python:3.11-slim
 
 # Install system deps for PyQt GUI
-"
-    Package:	                What it does:
-    libgl1	                    OpenGL rendering
-    libxkbcommon-x11-0	        keyboard input
-    libxcb-*	                window system communication
-    qtbase5-dev	                Qt runtime
-"
+   #  Package:	                What it does:
+   # libgl1	                    OpenGL rendering
+   #  libxkbcommon-x11-0	        keyboard input
+   #  libxcb-*	                window system communication
+   #  qtbase5-dev	                Qt runtime
+
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libxkbcommon-x11-0 \
@@ -19,10 +18,9 @@ RUN apt-get update && apt-get install -y \
     # ^ Cleans cached package lists => reduces image size.
 WORKDIR /app
 
-"
-    1st.move requirements.txt into container
-    2nd. install Python libraries
-"
+   # 1st.move requirements.txt into container
+   # 2nd. install Python libraries
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
