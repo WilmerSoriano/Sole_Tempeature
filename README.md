@@ -29,15 +29,18 @@ A simple **desktop weather application** built using **PyQt** for the GUI and th
 
 ## ⚡ Setup Instructions
 
+### 0. ✅ Requirements
+- Docker Desktop  
+- WSL2 enabled on Windows
+
 ### 1st. Set up API key
 Create a `.env` file:
-```text
-OPEN_API_KEY=your_open_weather_map_api_key_here
 ```
----
+OPEN_API_KEY= use the link below to get your free API key.
+```
 
-### 2nd. Build the image
-```text
+### 2nd. Build the image (use Sudo if needed)
+```
 docker build -t sole_temperature .
 ```
 
