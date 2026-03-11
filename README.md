@@ -6,7 +6,7 @@
 
 A simple **desktop weather application** built using **PyQt** for the GUI and the **OpenWeatherMap API** to fetch live weather data.
 
-![Weather App Screenshot](screenshot.png)  
+![Weather App Screenshot](/assets/screenshot.png)  
 
 ---
 
