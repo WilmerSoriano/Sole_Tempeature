@@ -1,15 +1,29 @@
 import os
 import requests
+from pathlib import Path
 from dotenv import load_dotenv
 
+def find_env():         
+    base_dir = Path(__file__).resolve().parent.parent
+    """
+        __file__ = Finds /run/src/api.py
+        parent = /run/src
+        parent.parent = /run and finds .env
+        etc...
+    """
+    # creates the path to .env file
+    load_path = base_dir / ".env"
+
+    return load_path
+
 def fetch_data():
-    # Load variables from .env into environment
-    load_dotenv()
+    # Loads the variables from .env into environment
+    load_dotenv(find_env())
 
     # Location: Dallas, Texas, US
     CityName = "Dallas"
 
-    # Keeping API Key a Secret
+    # using .env, call the variable name, keeping API Key a Secret
     API_KEY = os.getenv("OPEN_API_KEY")
 
     URL = "https://api.openweathermap.org/data/2.5/weather"
