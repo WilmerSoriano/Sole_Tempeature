@@ -35,7 +35,7 @@ A simple **desktop weather application** built using **PyQt** for the GUI and th
 - Linux OS: run ```xhost +local:docker``` in terminal to allow GUI apps
 
 ### 1st. Set up API key
-Create a `.env` file within repo folder and add the following line:
+Create a `.env` file within run folder (ex: run/.env), and add the following line:
 ```
 OPEN_API_KEY= use the link below to get your free API key.
 ```
@@ -55,7 +55,16 @@ docker-compose up
 docker-compose down
 ```
 
+### NOTE: closing container does not shut down image
+Either use docker desktop interface to pause or use the following command:
+
+```
+docker images
+```
 ---
+```
+docker rmi sole_temperature
+```
 
 ## 📌 Notes
 
