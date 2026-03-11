@@ -1,12 +1,12 @@
 # Start from a small Linux image that already has Python 3.11 installed
 FROM python:3.11-slim
 
-# Install system deps for PyQt GUI
+# Install system dependencies for PyQt GUI
    #  Package:	                What it does:
-   # libgl1	                    OpenGL rendering
-   #  libxkbcommon-x11-0	        keyboard input
+   #  libgl1	                OpenGL rendering
+   #  libxkbcommon-x11-0	    keyboard input
    #  libxcb-*	                window system communication
-   #  qtbase5-dev	                Qt runtime
+   #  qtbase5-dev	             Qt runtime
 
 RUN apt-get update && apt-get install -y \
     libgl1 \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     # ^ Cleans cached package lists => reduces image size.
 WORKDIR /app
 
-   # 1st.move requirements.txt into container
+   # 1st. move requirements.txt into container
    # 2nd. install Python libraries
 
 COPY requirements.txt .
