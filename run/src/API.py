@@ -1,7 +1,7 @@
 import os
 import requests
-from pathlib import Path
-from dotenv import load_dotenv
+from pathlib import Path # to find path to the file
+from dotenv import load_dotenv # to load/take the information with a file
 
 def find_env():         
     base_dir = Path(__file__).resolve().parent.parent
